@@ -1,0 +1,33 @@
+{
+  "input": {
+    "ticket_id": "TKT-001",
+    "complaint": "I sent 5000 taka to a wrong number around 2pm today.",
+    "language": "en",
+    "channel": "in_app_chat",
+    "user_type": "customer",
+    "transaction_history": [
+      {
+        "transaction_id": "TXN-9101",
+        "timestamp": "2026-04-14T14:08:22Z",
+        "type": "transfer",
+        "amount": 5000,
+        "counterparty": "+8801719876543",
+        "status": "completed"
+      }
+    ]
+  },
+  "output": {
+    "ticket_id": "TKT-001",
+    "relevant_transaction_id": "TXN-9101",
+    "evidence_verdict": "consistent",
+    "case_type": "wrong_transfer",
+    "severity": "high",
+    "department": "dispute_resolution",
+    "agent_summary": "Customer reports sending money to the wrong recipient via TXN-9101. Dispute review required.",
+    "recommended_next_action": "Initiate wrong-transfer dispute workflow for transaction TXN-9101. Verify recipient details.",
+    "customer_reply": "We have noted your concern regarding ticket TKT-001. Our dispute resolution team will review the transaction details and contact you through official channels. Please do not share your PIN or OTP with anyone.",
+    "human_review_required": true,
+    "confidence": 0.95,
+    "reason_codes": ["wrong_transfer", "transaction_match", "completed_transaction", "evidence_supported"]
+  }
+}
