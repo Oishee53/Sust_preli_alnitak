@@ -1,8 +1,5 @@
-version: "3.9"
-
 services:
 
-  # ── Nginx Load Balancer ─────────────────────────────────────────────────────
   nginx:
     image: nginx:alpine
     ports:
@@ -15,9 +12,8 @@ services:
       - gateway3
     restart: always
 
-  # ── Gateway Instances (3 for load balancing) ────────────────────────────────
   gateway1:
-    build: ./gateway
+    image: oishee53/queuestorm-gateway:v1
     environment:
       - INVESTIGATOR_URL=http://investigator:8001
       - CLASSIFIER_URL=http://classifier:8002
@@ -31,7 +27,7 @@ services:
     restart: always
 
   gateway2:
-    build: ./gateway
+    image: oishee53/queuestorm-gateway:v1
     environment:
       - INVESTIGATOR_URL=http://investigator:8001
       - CLASSIFIER_URL=http://classifier:8002
@@ -45,7 +41,7 @@ services:
     restart: always
 
   gateway3:
-    build: ./gateway
+    image: oishee53/queuestorm-gateway:v1
     environment:
       - INVESTIGATOR_URL=http://investigator:8001
       - CLASSIFIER_URL=http://classifier:8002
@@ -58,27 +54,26 @@ services:
       - llm
     restart: always
 
-  # ── Microservices ────────────────────────────────────────────────────────────
   investigator:
-    build: ./investigator
+    image: oishee53/queuestorm-investigator:v1
     expose:
       - "8001"
     restart: always
 
   classifier:
-    build: ./classifier
+    image: oishee53/queuestorm-classifier:v1
     expose:
       - "8002"
     restart: always
 
   safety:
-    build: ./safety
+    image: oishee53/queuestorm-safety:v1
     expose:
       - "8003"
     restart: always
 
   llm:
-    build: ./llm
+    image: oishee53/queuestorm-llm:v1
     expose:
       - "8004"
     environment:
