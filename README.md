@@ -288,8 +288,25 @@ Input from `SUST_Preli_Sample_Cases.json` case SAMPLE-01:
   "confidence": 0.95,
   "reason_codes": ["wrong_transfer", "transaction_match", "completed_transaction", "evidence_supported"]
 }
+
 ```
+## Live Deployment
+
+**Deployed on:** Poridhi Lab VM
+
+**Public Endpoint:** [https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io](https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io)
+
+**Health Check:** [https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io/health](https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io/health)
+
+**Analyze Ticket:** [https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io/analyze-ticket](https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io/analyze-ticket)
+
+**GitHub Repository:** [https://github.com/Oishee53/Sust_preli_alnitak](https://github.com/Oishee53/Sust_preli_alnitak)
+---
+---
+
 
 ---
 
 *QueueStorm Investigator · bKash presents SUST CSE Carnival 2026 · Codex Community Hackathon*
+
+
