@@ -291,7 +291,7 @@ Input from `SUST_Preli_Sample_Cases.json` case SAMPLE-01:
 
 ## Live Deployment
 
-**Deployed on:** Poridhi Lab VM
+Deployed on: Poridhi Lab VM
 
 **Public Endpoint:** `https://6a36acda950c78444441f603_7a9bd37d.lb.poridhi.io`
 
